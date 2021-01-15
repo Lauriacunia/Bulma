@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Clase 55</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR
+  Puede contener:
+  // navbar-brand  aca va ell logo de pagina
+     adentro contiene ademas: nav-bar-burger
+  //navbar-menu para ver menu en desktop (se esconde en mobile)
+    puedo meter cosas a la derecha o la izquierda con:
+    navbar-start(se ubica too a la izquierda)
+    navbar-end (esta a la derecha, se le puede meter cualquier cosa)
+  // cada elemento de navegacion tiene que estar dentro de un div
+  con la clase navbar-item
+-->
+
+  <div class="navbar is-dark">
+    <!-- Puedo rodear el contenido en un contenedor FLEXIBLE-->
+    <div class="container">
+      <!--LOGO Y HAMBURGUESA-->
+      <div class="navbar-brand">
+        <img src="http://www.placekitten.com/150/50" />
+        <!-- adentro de navbar-brand va el icono hamburguesa-->
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <i class="icon fas fa-bars"></i>
+        </a>
+      </div>
+
+      <!--MENU DE NAVEGACION-->
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">Home</a>
+          <a class="navbar-item">Tecnologias</a>
+          <a class="navbar-item">Proyectos</a>
+
+          <!-- Hacer un dropdown en uno de los items-->
+          <div class="navbar-item has-dropdown is-hoverable" id="menu">
+            <a class="navbar-link">Dropdown</a>
+            <!--el titulo-->
+            <div class="navbar-dropdown">
+              <a class="navbar-item">Github</a>
+              <a class="navbar-item">LinkedIn</a>
+              <a class="navbar-item">Contacto</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <button class="button is-primary">Registrarse</button>
+          </div>
+          <div class="navbar-item">
+            <button class="button is-info is-outlined">Iniciar Sesion</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER  se hace con clase hero
+  dentro puedo tener tres secciones: hero-head, hero-body y hero-foot
+  le puedo cambiar el alto: is-medium, is-large, is-fullheight
+o los colores: is-primary, is-dark, is-danger etc
+
+para centrar su texto uso has-text-centered-->
+
+  <header class="hero is-primary is-medium has-text-centered">
+     <!-- Puedo rodear el contenido en un contenedor FLEXIBLE-->
+     <div class="container">
+        <div class="hero-head">
+          <h3> Soy el head</h3>
+        </div>
+        <div class="hero-body">
+          <h1 class="title">Titulo de mi header</h1>
+          <h2 class="subtitle">Soy el subtitulo</h2>
+        </div>
+
+        <div class="hero-foot">
+          <h3> Soy el footer</h3>
+        </div>
+     </div>
+
+  </header>
+
+  <!-- SECTION y CONTAINER
+  
+  Tiene que ser HIJO DIRECTO DE BODY
+
+  da cierto espaciado arriba y abajo
+
+  puedo agregarle tamaños: is-medium, is-large ::: solo agregan padding 
+  no modifican el tamaño de la seccion
+  
+
+  ✨✨✨ lo interesante es usar SECTION junto a la clase CONTENEDOR!!!✨✨✨✨
+
+  CONTAINER me ayuda al espaciado horizontal en responsive,
+  le pone espaciado del texto con su margen izquierdo en todos los breakpoints
+
+  puedo redear cualquier componente de mi web con un div con la clase "container",
+  excepto un hero (que quiero ocupe el 100%)
+  -->
+
+  <section class="section is-medium">
+    <div class="container">
+      <h3 class="title is-3">Esta es una seccion</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consectetur facere nemo culpa eligendi obcaecati
+        debitis minus repudiandae tempora sapiente tenetur, voluptatibus corrupti unde aliquam fugiat molestiae ex odio
+        laudantium explicabo deserunt recusandae possimus nesciunt? Ut officia error mollitia odit dolores fugiat
+        exercitationem ullam, voluptatibus cumque delectus nihil quidem atque! Alias dolor corporis nostrum optio ipsam
+        necessitatibus aliquam repellat nihil eius officia mollitia explicabo unde id vero, ex exercitationem, dolorum
+        nulla illo saepe in delectus cupiditate, porro magni cumque! Illum sequi minus molestiae adipisci quas non eius
+        ea natus deleniti! Magni at est fuga nesciunt sapiente molestias eum quibusdam dolore.</p>
+    </div>
+
+
+  </section>
+  <script src="main.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Clase 54</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+</head>
+
+<body>
+
+  <!-- BREADCRUMB 
+    ver en la documentacion clases complementarias para modificar un poco el estilo 
+    -->
+
+  <nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="#">Bulma</a></li>
+      <li><a href="#">Documentation</a></li>
+      <li><a href="#">Components</a></li>
+      <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+    </ul>
+  </nav>
+
+  <!-- DROPDOWN
+    ver en la documentacion clases complementarias para modificar un poco el estilo 
+
+    para que se despliegue agregale la clase is-active con JS
+    al div con la clase dropdown cuando haces click en el boton
+
+    -->
+
+  <div class="dropdown">
+    <div class="dropdown-trigger">
+      <button class="button" id="btn-dropdown" aria-haspopup="true" aria-controls="dropdown-menu3">
+        <span>Click me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+      <div class="dropdown-content">
+        <a href="#" class="dropdown-item">
+          Overview
+        </a>
+        <a href="#" class="dropdown-item">
+          Modifiers
+        </a>
+        <a href="#" class="dropdown-item">
+          Grid
+        </a>
+        <a href="#" class="dropdown-item">
+          Form
+        </a>
+        <a href="#" class="dropdown-item">
+          Elements
+        </a>
+        <a href="#" class="dropdown-item">
+          Components
+        </a>
+        <a href="#" class="dropdown-item">
+          Layout
+        </a>
+        <hr class="dropdown-divider">
+        <a href="#" class="dropdown-item">
+          More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown is-hoverable">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+        <span>Hover me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+      <div class="dropdown-content">
+        <div class="dropdown-item">
+          <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- IMAGENES 
+      Usar la clase image para todos los contenedores de img
+      vamos a trabajar forzando que las img se adapten al tamaño de su contenedor
+
+  -->
+
+  <figure class="image is-128x128">
+    <img src="http://www.placekitten.com/200">
+  </figure>
+
+  <figure class="image is-128x128">
+    <img class="is-rounded" src="http://www.placekitten.com/300">
+  </figure>
+
+
+  <!--  TITULOS H1,H2 P ...
+    Hay dos clases principales:
+    -title
+    -subtitle
+    cada una puede tener 6 tamaños : is-1, is-2, is-3 ...
+    
+    -->
+
+  <h1 class="title is-1">Title 1</h1>
+  <h2 class="title is-2">Title 2</h2>
+  <h3 class="title is-3">Title 3</h3>
+  <h4 class="title is-4">Title 4</h4>
+  <h5 class="title is-5">Title 5</h5>
+  <h6 class="title is-6">Title 6</h6>
+
+  <h1 class="subtitle is-1">Subtitle 1</h1>
+  <h2 class="subtitle is-2">Subtitle 2</h2>
+  <h3 class="subtitle is-3">Subtitle 3</h3>
+  <h4 class="subtitle is-4">Subtitle 4</h4>
+  <h5 class="subtitle is-5">Subtitle 5</h5>
+  <h6 class="subtitle is-6">Subtitle 6</h6>
+
+
+  <!-- Tarjetas con Bulma
+    puede ser un div o un article
+    Por defecto ocupa el 100% de su contenedor
+
+  -->
+
+  <article class="card">
+    <div class="card-content">
+      <div class="content">
+        Contenido de la tarjeta
+      </div>
+
+    </div>
+  </article>
+
+
+  <!--
+    card: the main container
+        card-header: a horizontal bar with a shadow
+              card-header-title: a left-aligned bold text
+              card-header-icon: a placeholder for an icon
+
+        card-image: a fullwidth container for a responsive image
+
+        card-content: a multi-purpose container for any other element
+
+        card-footer: a horizontal list of controls
+              card-footer-item: a repeatable list item
+
+You can center the card-header-title by appending the is-centered modifier.
+  -->
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Component
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">John Smith</p>
+          <p class="subtitle is-6">@johnsmith</p>
+        </div>
+      </div>
+  
+      <div class="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+        <a href="#">#css</a> <a href="#">#responsive</a>
+        <br>
+        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a href="#" class="card-footer-item">Save</a>
+      <a href="#" class="card-footer-item">Edit</a>
+      <a href="#" class="card-footer-item">Delete</a>
+    </footer>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+</body>
+
+</html>

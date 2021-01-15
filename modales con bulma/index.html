@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clase 54</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    
+  </head>
+  <body>
+   
+    <!-- MODALES 
+    
+    Por defecto estan escondidos, tienen display:none   
+    si le agrego la clase is-active lo veo , le da display:flex -->
+
+    <!-- El overlay es un div dentro de modal
+    con la clase modal-background
+    -->
+
+    <!--  modal-card tiene tres secciones: 
+      
+      header (modal-card-head)
+      body (modal-card-body)
+      footer (modal-card-footer) 
+    -->
+
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Modal title</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <p> Acá va el contenido del modal</p>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button">Cancel</button>
+        </footer>
+      </div>
+
+    </div>
+
+    <button class="button is-primary" id="btn-open-modal">Abrir modal</button>
+   
+
+
+
+
+
+
+    <script src="main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+  </body>
+</html>
